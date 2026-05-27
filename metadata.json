@@ -1,0 +1,6 @@
+{
+  "name": "Laundris AI Studio",
+  "description": "Transform text prompts into studio-quality cinematic AI videos with Laundris AI Studio. A premium Generative AI SaaS for businesses, creators, and brands.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
