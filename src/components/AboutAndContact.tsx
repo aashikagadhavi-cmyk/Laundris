@@ -100,7 +100,7 @@ export default function AboutAndContact({ mode = 'about', onNavigate }: AboutAnd
                 <span className="bg-gradient-to-r from-purple-400 via-indigo-400 to-blue-500 bg-clip-text text-transparent font-sans">Hollywood-Grade Generative Cinema</span>
               </h1>
               <p className="text-neutral-400 text-xs md:text-sm leading-relaxed">
-                Laundris Private Limited is a specialized deep-tech studio headquartered in Goregaon West, Mumbai, India. We construct software platforms to completely turn standard written screenplays, promotional copy, and commercial storyboards into finished, broadcast-ready 4K cinematic exports.
+                Laundris Private Limited is a generative AI company transforming text into dynamic high quality video making professional video creation accessible every business creator. Headquartered in Goregaon West, Mumbai, India, we construct software platforms to completely turn standard written screenplays, promotional copy, and commercial storyboards into finished, broadcast-ready cinematic exports.
               </p>
 
               <blockquote className="text-neutral-300 italic border-l-2 border-purple-500 pl-4 py-1.5 text-xs">

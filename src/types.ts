@@ -17,7 +17,16 @@ export type PageView =
   | 'contact'
   | 'blog'
   | 'privacy'
-  | 'terms';
+  | 'terms'
+  | 'platform'
+  | 'solutions'
+  | 'technology'
+  | 'ai-video-engine'
+  | 'ai-voice-engine'
+  | 'generative-ai'
+  | 'ai-video-editor'
+  | 'multi-language-dubbing'
+  | 'content-generator';
 
 export interface ChatMessage {
   id: string;

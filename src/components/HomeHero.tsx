@@ -60,7 +60,7 @@ export default function HomeHero({ onNavigate }: HomeHeroProps) {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-neutral-400 text-sm md:text-base leading-relaxed max-w-xl"
             >
-              Laundris Private Limited empowers modern businesses, advertising agencies, and creators to compile studio-quality 4K cinematic video reels instantly using cutting-edge Generative AI technology.
+              Laundris Private Limited is a generative AI company transforming text into dynamic high quality video making professional video creation accessible every business creator.
             </motion.p>
 
             {/* CTAs */}

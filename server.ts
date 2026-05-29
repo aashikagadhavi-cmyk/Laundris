@@ -33,10 +33,7 @@ function getAI(): GoogleGenAI | null {
 // System description for chat assistant
 const LAUNDRIS_SYSTEM_CONTEXT = `
 You are the official AI Assistant for Laundris Private Limited.
-Laundris Private Limited is an India-based Generative AI company that transforms text prompts into studio-quality cinematic videos.
-
-Company Details:
-- Company Name: Laundris Private Limited
+Laundris Private Limited is a generative AI company transforming text into dynamic high quality video making professional video creation accessible every business creator.
 - Tagline: "Turn Text Into Cinematic AI Videos"
 - Founder & CEO: Aditya Yadav
 - Support Email: help@laundris.in

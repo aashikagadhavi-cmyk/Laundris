@@ -19,6 +19,9 @@ import ApiPage from './components/ApiPage';
 import AboutAndContact from './components/AboutAndContact';
 import BlogAndLegal from './components/BlogAndLegal';
 import AiChatBot from './components/AiChatBot';
+import PlatformPages from './components/PlatformPages';
+import SolutionsPage from './components/SolutionsPage';
+import TechnologyPage from './components/TechnologyPage';
 
 export default function App() {
   const [view, setView] = useState<PageView>('home');
@@ -33,13 +36,13 @@ export default function App() {
 
   const menuItems = [
     { id: 'home', label: 'Home' },
-    { id: 'product', label: 'Product & Features' },
+    { id: 'about', label: 'About' },
+    { id: 'platform', label: 'Platform' },
+    { id: 'solutions', label: 'Solutions' },
+    { id: 'technology', label: 'Technology' },
+    { id: 'api', label: 'Developers' },
     { id: 'pricing', label: 'Pricing' },
-    { id: 'demo', label: 'Live Demo' },
-    { id: 'api', label: 'APIs' },
-    { id: 'blog', label: 'Journal' },
-    { id: 'about', label: 'About Us' },
-    { id: 'contact', label: 'Contact Us' }
+    { id: 'contact', label: 'Contact' }
   ] as const;
 
   return (
@@ -69,7 +72,7 @@ export default function App() {
                 key={item.id}
                 onClick={() => setView(item.id)}
                 className={`text-[12.5px] font-semibold tracking-wide hover:text-purple-300 transition-colors focus:outline-none ${
-                  view === item.id || (item.id === 'product' && view === 'features')
+                  view === item.id
                     ? 'text-purple-400 font-bold'
                     : 'text-neutral-300'
                 }`}
@@ -219,16 +222,24 @@ export default function App() {
             {view === 'privacy' && <BlogAndLegal initialSubTab="privacy" />}
             
             {view === 'terms' && <BlogAndLegal initialSubTab="terms" />}
+            
+            {view === 'solutions' && <SolutionsPage onNavigate={setView} />}
+            
+            {view === 'technology' && <TechnologyPage onNavigate={setView} />}
+            
+            {['platform', 'ai-video-engine', 'ai-voice-engine', 'generative-ai', 'ai-video-editor', 'multi-language-dubbing', 'content-generator'].includes(view) && (
+              <PlatformPages page={view} onNavigate={setView} />
+            )}
           </motion.div>
         </AnimatePresence>
       </main>
 
       {/* 4. FOOTER REGIONS */}
       <footer className="bg-neutral-950 border-t border-neutral-900 py-12 px-4 md:px-8 select-none relative z-10 font-sans text-xs">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
           
           {/* Brand Column */}
-          <div className="space-y-4 text-left">
+          <div className="space-y-4 text-left col-span-2 md:col-span-1">
             <div className="flex items-center gap-2.5">
               <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-purple-600 to-blue-500 text-white flex items-center justify-center">
                 <Cpu className="w-4.5 h-4.5" />
@@ -236,8 +247,21 @@ export default function App() {
               <span className="font-bold tracking-widest text-white block">LAUNDRIS</span>
             </div>
             <p className="text-neutral-500 text-[11px] leading-relaxed">
-              Transform text descriptions directly into Hollywood-caliber 4K video streams in minutes. Securely engineered in Mumbai, domestic registered office.
+              Laundris Private Limited is a generative AI company transforming text into dynamic high quality video making professional video creation accessible every business creator
             </p>
+          </div>
+
+          {/* Platform Column NEW */}
+          <div className="space-y-3.5 text-left">
+            <span className="font-mono text-[9px] font-bold text-neutral-400 uppercase tracking-widest block">Platform</span>
+            <div className="flex flex-col gap-2 font-medium text-neutral-500">
+              <button onClick={() => setView('ai-video-engine')} className="hover:text-purple-400 transition-colors text-left focus:outline-none">AI Video Engine</button>
+              <button onClick={() => setView('ai-voice-engine')} className="hover:text-purple-400 transition-colors text-left focus:outline-none">AI Voice Engine</button>
+              <button onClick={() => setView('generative-ai')} className="hover:text-purple-400 transition-colors text-left focus:outline-none">Generative AI</button>
+              <button onClick={() => setView('ai-video-editor')} className="hover:text-purple-400 transition-colors text-left focus:outline-none">AI Video Editor</button>
+              <button onClick={() => setView('multi-language-dubbing')} className="hover:text-purple-400 transition-colors text-left focus:outline-none">Multi-Language Dubbing</button>
+              <button onClick={() => setView('content-generator')} className="hover:text-purple-400 transition-colors text-left focus:outline-none">Content Generator</button>
+            </div>
           </div>
 
           {/* Links Column A */}
@@ -262,7 +286,7 @@ export default function App() {
           </div>
 
           {/* Links Column C */}
-          <div className="space-y-3.5 text-left">
+          <div className="space-y-3.5 text-left col-span-2 lg:col-span-1 md:col-span-1">
             <span className="font-mono text-[9px] font-bold text-neutral-400 uppercase tracking-widest block">Governance</span>
             <div className="flex flex-col gap-2 font-medium text-neutral-500">
               <button onClick={() => setView('privacy')} className="hover:text-purple-400 transition-colors text-left focus:outline-none">Privacy Protection</button>
