@@ -171,6 +171,7 @@ export default function HomeHero({ onNavigate }: HomeHeroProps) {
             <div className="lg:col-span-8 rounded-xl overflow-hidden aspect-video bg-black border border-neutral-850 relative group">
               <video
                 src={VIDEO_SHOWCASE[activeShowcaseIdx].videoUrl}
+                poster="/src/assets/images/cinematic_preview_1780058841054.png"
                 className="w-full h-full object-cover"
                 autoPlay
                 muted

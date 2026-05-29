@@ -122,20 +122,35 @@ export default function AboutAndContact({ mode = 'about', onNavigate }: AboutAnd
             </div>
 
             {/* Corporate Journey Timeline - Column 5 */}
-            <div className="lg:col-span-5 relative bg-neutral-950/60 p-6 rounded-2xl border border-neutral-900">
-              <span className="text-[10px] text-neutral-500 font-mono uppercase tracking-widest block mb-4 font-bold">RESEARCH TIMELINE</span>
-              <div className="absolute inset-y-12 left-10 w-[1px] bg-neutral-900" />
-              <div className="space-y-6 relative pl-10">
-                {timelineYears.map((item, idx) => (
-                  <div key={idx} className="space-y-1 relative">
-                    <div className="absolute -left-12 top-1.5 w-4 h-4 rounded-full bg-[#050505] border border-purple-500/50 flex items-center justify-center">
-                      <span className="w-1.5 h-1.5 bg-purple-500 rounded-full" />
+            <div className="lg:col-span-5 space-y-6">
+              <div className="rounded-2xl overflow-hidden border border-neutral-900 bg-neutral-950/80 p-1">
+                <img 
+                  src="/src/assets/images/cinematic_preview_1780058841054.png" 
+                  alt="Laundris Private Limited Mumbai Generative Cinema R&D" 
+                  className="w-full aspect-video object-cover rounded-xl opacity-90 hover:opacity-100 transition-opacity"
+                  referrerPolicy="no-referrer"
+                />
+                <div className="p-3">
+                  <span className="text-[9px] font-mono text-purple-400 uppercase tracking-widest block font-bold">LAUNDRIS MUMBAI R&D CENTER</span>
+                  <p className="text-[10px] text-neutral-400 mt-0.5">High-end GPU clustering facility inside Goregaon West, Mumbai, India.</p>
+                </div>
+              </div>
+
+              <div className="relative bg-neutral-950/60 p-6 rounded-2xl border border-neutral-900">
+                <span className="text-[10px] text-neutral-500 font-mono uppercase tracking-widest block mb-4 font-bold">RESEARCH TIMELINE</span>
+                <div className="absolute inset-y-12 left-10 w-[1px] bg-neutral-900" />
+                <div className="space-y-6 relative pl-10 block">
+                  {timelineYears.map((item, idx) => (
+                    <div key={idx} className="space-y-1 relative">
+                      <div className="absolute -left-12 top-1.5 w-4 h-4 rounded-full bg-[#050505] border border-purple-500/50 flex items-center justify-center">
+                        <span className="w-1.5 h-1.5 bg-purple-500 rounded-full" />
+                      </div>
+                      <div className="text-sm font-mono font-bold text-purple-400">{item.year}</div>
+                      <strong className="text-xs text-white block tracking-wide">{item.title}</strong>
+                      <p className="text-[11px] text-neutral-400 leading-relaxed">{item.desc}</p>
                     </div>
-                    <div className="text-sm font-mono font-bold text-purple-400">{item.year}</div>
-                    <strong className="text-xs text-white block tracking-wide">{item.title}</strong>
-                    <p className="text-[11px] text-neutral-400 leading-relaxed">{item.desc}</p>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
             </div>
           </div>
